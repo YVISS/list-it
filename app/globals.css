@@ -1,62 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 
-  --fs-caption: 0.75rem;    /* 12px */
-  --fs-small: 0.875rem;     /* 14px */
-  --fs-body: 1rem;          /* 16px */
-  --fs-body-lg: 1.125rem;   /* 18px */
-  --fs-title-sm: 1.25rem;   /* 20px */
-  --fs-title-md: 1.5rem;    /* 24px */
-  --fs-title-lg: 1.75rem;   /* 28px */
-  --fs-heading-sm: 2rem;    /* 32px */
-  --fs-heading-md: 2.25rem; /* 36px */
-  --fs-heading-lg: 2.5rem;  /* 40px */
-  --fs-display: 3rem;       /* 48px */
+    --fs-caption: 0.75rem; /* 12px */
+    --fs-small: 0.875rem; /* 14px */
+    --fs-body: 1rem; /* 16px */
+    --fs-body-lg: 1.125rem; /* 18px */
+    --fs-title-sm: 1.25rem; /* 20px */
+    --fs-title-md: 1.5rem; /* 24px */
+    --fs-title-lg: 1.75rem; /* 28px */
+    --fs-heading-sm: 2rem; /* 32px */
+    --fs-heading-md: 2.25rem; /* 36px */
+    --fs-heading-lg: 2.5rem; /* 40px */
+    --fs-heading-xl: 3.5rem; /* 40px */
+    --fs-display: 3rem; /* 48px */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-outfit: var(--font-outfit);
-}
-
-@media (prefers-color-scheme:dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-outfit: var(--font-outfit);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-outfit);
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-outfit);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--foreground);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--foreground);
 }
 
-.heading{
-  font-size: var(--fs-heading-lg);
+.heading {
+    font-size: var(--fs-display);
 }
 
-.sub-heading{
-  font-size: var(--fs-subheading-sm);
+.sub-heading {
+    font-size: var(--fs-subheading-sm);
 }
 
-section{
-  display: flex;
-  padding:60px 100px;
-  width: 100%;
+section {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 60px;
+    padding-bottom: 0;
+    width: 100%;
 }
 
-input[type="text"]{
-  padding: 10px;
-  border: 1px solid var(--foreground) !important;
-  border-radius: 4px;
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--foreground) !important;
+    border-radius: 4px;
 }
 
+/*input[type="select"] {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}*/
