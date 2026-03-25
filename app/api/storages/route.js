@@ -6,11 +6,11 @@ import { createClient } from "@/utils/supabase/client";
 const supabase = createClient();
 
 export async function GET() {
-  const { data: coms, error: comsError } = await supabase.from("list-it_committees").select();
+  const { data: storage, error: storageError } = await supabase.from("list-it_storage").select();
 
-  if (comsError) {
-    return NextResponse.json(comsError);
+  if (storageError) {
+    return NextResponse.json(storageError);
   }
 
-  return NextResponse.json(coms);
+  return NextResponse.json(storage);
 }
