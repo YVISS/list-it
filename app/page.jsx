@@ -1,5 +1,6 @@
 import { Permanent_Marker, Outfit } from "next/font/google";
 import InventoryForm from "./_component/InventoryForm/InventoryForm";
+import InventoryList from "./_component/InventoryList/InventoryList";
 
 const marker = Permanent_Marker({
   variable: "--font-permanent-marker",
@@ -18,8 +19,8 @@ export default async function Home() {
     <div>
       <section>
         <div className="bg">
-          <h1 className={`${marker.className} font-bold heading w-full`}>
-            Listit
+          <h1 className={`${outfit.className} font-bold heading w-full`}>
+            List-it
           </h1>
           <p className="sub-heading w-full">
             Insert Items to put into inventory.
@@ -27,6 +28,7 @@ export default async function Home() {
         </div>
       </section>
       <InventoryForm />
+      <InventoryList />
     </div>
   );
 }
