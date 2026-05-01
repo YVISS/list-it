@@ -27,8 +27,8 @@ export default function InventoryForm() {
       const storage = await storageResponse.json();
       console.log(storage);
 
-      setCommittees(committee);
-      setStorage(storage);
+      setCommittees(Array.isArray(committee) ? committee : []);
+      setStorage(Array.isArray(storage) ? storage : []);
       setLoading(false);
     }
     fetchData();

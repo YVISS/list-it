@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(rm -rf .next)",
+      "Bash(npx next:*)",
+      "Bash(ls c:/Users/rowee/Desktop/listit/tsconfig*.json)"
+    ]
+  }
+}

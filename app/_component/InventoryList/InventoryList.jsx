@@ -35,7 +35,7 @@ export default function InventoryList() {
       const itemsResponse = await fetch(`${BASE_URL}/api/InventoryList`);
       const items = await itemsResponse.json();
       console.log("API returned:", items);
-      setItems(items);
+      setItems(Array.isArray(items) ? items : []);
       setLoading(false);
     }
     fetchItems();
@@ -102,7 +102,7 @@ export default function InventoryList() {
   return (
     <section className="flex flex-col gap-4">
       <h1>View All Listed Items</h1>
-      <SearchBar search={search} setSearch={setSearch}/>
+      <SearchBar search={search} setSearch={setSearch}/>  
       <table>
         <thead>
           <tr>

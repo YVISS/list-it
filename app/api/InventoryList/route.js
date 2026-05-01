@@ -9,7 +9,7 @@ export async function GET() {
   const { data: items, error: itemsError } = await supabase.from("list-it_items").select();
 
   if (itemsError) {
-    return NextResponse.json(itemsError);
+    return NextResponse.json({ error: itemsError.message }, { status: 500 });
   }
 
   return NextResponse.json(items);

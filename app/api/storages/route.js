@@ -9,7 +9,7 @@ export async function GET() {
   const { data: storage, error: storageError } = await supabase.from("list-it_storage").select();
 
   if (storageError) {
-    return NextResponse.json(storageError);
+    return NextResponse.json({ error: storageError.message }, { status: 500 });
   }
 
   return NextResponse.json(storage);
